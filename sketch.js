@@ -157,10 +157,17 @@ function draw() {
   // Draw player
   player.draw();
 
-  // UI instructions
+  // UI instructions with background for better visibility
+  // Draw semi-transparent background for text
+  fill(255, 255, 255, 200); // White with transparency
+  noStroke();
+  rect(5, 5, 470, 45, 5); // Rounded rectangle background
+  
+  // Draw text on top
   fill(0);
-  text(`Level: ${level.name}`, 10, 20);
-  text("Arrow keys to move • Reach green to advance", 10, 40);
+  textSize(16);
+  text(`Level: ${level.name}`, 10, 24);
+  text("Arrow keys to move • Reach green to advance", 10, 44);
 }
 
 // Handle keyboard input for player movement
